@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <title>Feed the Donkey</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row top">
+        <div class="col-4">
+          <a href = "/index.html" class="main-title">DONKEYS</a>
+        </div>
+        <div class="col-sm-2 center">
+          <a href = "/page1.html" class="internal-link">I Have a Donkey</a>
+        </div>
+        <div class="col-sm-2 center">
+          <a href = "/page2.html" class="internal-link">I Want a Donkey</a>
+        </div>
+        <div class="col-sm-2 center">
+          <a href = "/page3.html" class="internal-link">Feed the Donkey</a>
+        </div>
+        <div class="col-sm-2 center">
+          <a href = "/page4.html" class="internal-link">I Hate Donkeys</a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-fluid main-horse-img">
+          <img src="/images/hungrydonkey.png" class="main-horse" id="horse">
+        </div>
+        <div class="col-fluid main-text center pagethreetext">
+          <p>Click to feed the donkey.</p>
+          <button type="button" onclick="feed()">Feed</button>
+          <button type="button" onclick="stopfeeding()">StopFeeding</button>
+        </div>
+        <script>
+          function feed() {
+            var image = document.getElementById("horse");
+            if (image.src.match("hungrydonkey")) {
+              image.src = "/images/feedingdonkey.png";
+            }
+          }
+          function stopfeeding() {
+            var image = document.getElementById("horse");
+            if (image.src.match("feedingdonkey")) {
+              image.src = "/images/hungrydonkey.png"
+            }
+          }
+        </script>
+      </div>
+    </div>
+  </body>
+</html>
